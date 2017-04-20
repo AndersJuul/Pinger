@@ -79,7 +79,10 @@ namespace AJF.Pinger.PingerService
 
                 Thread.Sleep(1 * 500);
                 Log.Information("Hello world");
-
+                int res;
+                var divRem = Math.DivRem(DateTime.Now.Second,5, out res);
+                if(divRem==0)
+                    Log.Warning("Hello world");
             }
         }
 
