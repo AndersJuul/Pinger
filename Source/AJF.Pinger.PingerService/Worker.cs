@@ -7,28 +7,13 @@ namespace AJF.Pinger.PingerService
 {
     public class Worker
     {
-        private const string ConfigFileName = "photomover.config";
         private BackgroundWorker _backgroundWorker;
-        //private List<IPhotoMoverConfig> _config;
         public bool WorkDone { get; set; }
 
         public void Start()
         {
             try
             {
-                //var pathList = ConfigurationManager.AppSettings["PathList"].Split(';');
-                //_config = new List<IPhotoMoverConfig>();
-
-                //foreach (var path in pathList)
-                //{
-                //    Log.Logger.Information("Watching: " + path);
-                //    var photoMoverConfig = new PhotoMoverConfig
-                //    {
-                //        Path = path
-                //    };
-                //    _config.Add(photoMoverConfig);
-                //}
-
                 _backgroundWorker = new BackgroundWorker
                 {
                     WorkerSupportsCancellation = true
